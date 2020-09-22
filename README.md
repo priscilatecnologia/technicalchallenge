@@ -1,6 +1,6 @@
 # Technical challenge
 
-Here is the information about the itens from "Technical chalenge".
+Here is the solving information from the items from "Technical challenge".
 
 # Challenges
 
