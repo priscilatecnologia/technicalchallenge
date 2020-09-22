@@ -5,7 +5,11 @@
     font-size: small;
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
     width: 324px;
-    position: relative;
+    padding: 10px; 
+}
+
+.article-div {
+    padding: 0px 0px 10px 0px;
 }
 
 .article-title {
@@ -19,6 +23,7 @@
     left: 250px;
     right: 0px;
     top: 10px;
+    padding: 10px 10px 10px 10px
 }
 
 .article-title-img {
@@ -26,6 +31,25 @@
     vertical-align: middle;
 }
 
-.padding-default {
-    padding: 5px 9px 3px 9px;
+.article-body-img {
+    width: 324px;
+    vertical-align: middle;
+}
+
+.article-body-img-button {
+    font-weight: bold;
+    color: #333332;
+    background-color: #a5a4a4;
+    border: solid;
+    padding: 10px 60px 10px 60px;
+    overflow: auto;
+    position: absolute;
+    left: 90px;
+    top: 485px;
+}
+
+.button {
+    text-decoration: none;
+    border-radius: 30px;
+    border-color: #c8c8c7;
 }
