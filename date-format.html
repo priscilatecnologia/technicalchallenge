@@ -39,12 +39,41 @@
         }
 
         ShowElapsedTime.prototype.setItSelf = function () {
-            // TODO: hidde the base of the datetime and (remain it to be used)
+            let self = this;
+            self.jsDateFormatList = document.getElementsByClassName('js-date-format');
+            self.length = self.jsDateFormatList.length - 1; // There is no needs to consider the last one
+
+            for (var i = 0; i < self.length; i++) {
+                let dateFormat = self.jsDateFormatList[i]; // set style none, it necessary to remain the date data to proceed the calc of elapsed time
+                dateFormat.style.display = 'none';
+
+                let elapsed = document.createElement('span');
+                elapsed.className = 'js-date-elapsed';
+
+                let parent = self.jsDateFormatList[i].parentElement;
+                parent.appendChild(elapsed);
+            }
         }
  
         ShowElapsedTime.prototype.setElapsedTime = function () {
-            // TODO: Add SPAN as brother to insert the elapesed time
-            // TODO: add sufixo (minute (s), second(s), etc)
+            let self = this;
+            const NOW = new Date();
+            const ELAPSED_DATA = document.getElementsByClassName('js-date-elapsed');
+            setInterval(function () {
+
+                for (var i = 0; i < self.length; i++) {
+                    ELAPSED_DATA[i].innerHTML = 1;
+
+                                    // TODO: Add SPAN as brother 
+
+                // TODO: add sufixo
+
+                // TODO: add process data 
+                }
+
+
+
+            }, 1000)
         }
 
         new ShowElapsedTime();
