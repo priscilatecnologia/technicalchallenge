@@ -34,8 +34,19 @@
             this.length;
             this.jsDateFormatList;
             this.currentDate;
+            this.setItSelf();
+            this.setElapsedTime();
         }
-      
+
+        ShowElapsedTime.prototype.setItSelf = function () {
+            // TODO: hidde the base of the datetime and (remain it to be used)
+        }
+ 
+        ShowElapsedTime.prototype.setElapsedTime = function () {
+            // TODO: Add SPAN as brother to insert the elapesed time
+            // TODO: add sufixo (minute (s), second(s), etc)
+        }
+
         new ShowElapsedTime();
 
     })();
