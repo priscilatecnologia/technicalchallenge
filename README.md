@@ -5,7 +5,12 @@ Solving items from "Technical challenge".
 # Challenges
 
 ## 1. Cache function
-Waiting to be implemented
+Waiting to be implemented.
+It was not implemented... I had some doubts.
+How it could be implemented? I thought that I would have to implement an MVC code.
+This implementation was not clear for me.
+
+If I had in a team group, I would request about the expectations and how it might work.
 
 ## 2. Date formatting
 This feature allow the user access the time elapsed on real time
