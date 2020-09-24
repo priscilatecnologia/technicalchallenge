@@ -57,23 +57,32 @@
  
         ShowElapsedTime.prototype.setElapsedTime = function () {
             let self = this;
-            const NOW = new Date();
+            let arrayType = []
             const ELAPSED_DATA = document.getElementsByClassName('js-date-elapsed');
             setInterval(function () {
-
-                for (var i = 0; i < self.length; i++) {
-                    ELAPSED_DATA[i].innerHTML = 1;
-
-                                    // TODO: Add SPAN as brother 
-
-                // TODO: add sufixo
-
-                // TODO: add process data 
+                const NOW = new Date();
+                for (let i = 0; i < self.length; i++) {
+                    let diff = NOW.getTime() - new Date(self.jsDateFormatList[i].innerText).getTime();
+                    ELAPSED_DATA[i].innerHTML = resultTimeElapsed(diff);
                 }
-
-
-
             }, 1000)
+        }
+
+        // TODO:  refactoring is requieried - algoritm repeat 3 times
+        function resultTimeElapsed(diff) {
+
+            if (diff < 60000) {
+                calc = Math.floor(diff / 1000);
+                return calc == 1 ? calc.toString() + ' second' : calc.toString()  + ' seconds';
+            }
+
+            if (diff < 3600000) {
+                calc = Math.floor(diff / 1000 / 60);
+                return calc == 1 ? calc.toString() + '  minut' : calc.toString() + ' minuts';
+            }
+
+            calc = Math.floor(diff / 1000 / 60 / 60);
+            return calc == 1 ? calc.toString()  + ' hour' : calc.toString() + ' hours';
         }
 
         new ShowElapsedTime();
